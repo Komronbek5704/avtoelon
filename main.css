@@ -1,0 +1,261 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #87ceeb;
+    color: white;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  #adsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .ad-card {
+    width: 90%;
+    max-width: 350px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ad-card h3 {
+    margin: 10px 0;
+  }
+  
+  .ad-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .ad-buttons button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .ad-buttons button.edit {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .ad-buttons button.delete {
+    background-color: #f44336;
+    color: white;
+  }
+  
+
+  #modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+  }
+  
+  #modal.hidden {
+    display: none;
+  }
+  
+  #adForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; 
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #adForm h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+  }
+  
+  #adForm input,
+  #adForm textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  #adForm button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #adForm button[type="submit"] {
+    background-color: #87ceeb;
+    color: white;
+  }
+  
+  #adForm button[type="button"] {
+    background-color: #f44336;
+    color: white;
+    margin-top: 10px;
+  }
+  
+
+  @media (max-width: 414px) {
+    header h1 {
+      font-size: 20px;
+    }
+  
+    .ad-card {
+      width: 95%;
+    }
+  
+    #adForm h2 {
+      font-size: 18px;
+    }
+  
+    #adForm input,
+    #adForm textarea {
+      font-size: 14px;
+    }
+  }
+  
+ 
+.ad-card img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+  
+  #adForm img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 200px; 
+    object-fit: cover;
+  }
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px solid transparent; 
+    transition: all 0.3s ease; 
+  }
+
+  button.edit {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  button.delete {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  button[type="submit"] {
+    background-color: #87ceeb;
+    color: white;
+  }
+  
+  button[type="button"] {
+    background-color: #f44336;
+    color: white;
+  }
+
+  button:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+  
+
+  button:active {
+    transform: translateY(2px); 
+    box-shadow: none;
+  }
+  
+
+  #closeModal {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  #closeModal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #closeModal:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+  
+
+  #adForm button,
+  .ad-buttons button {
+    width: 100%; 
+    margin-top: 10px;
+  }
+  
+  #adForm button[type="submit"] {
+    background-color: #87ceeb;
+    color: white;
+  }
+  
+  .ad-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .ad-buttons button {
+    width: 48%;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s ease;
+  }
+  
+
+  .ad-buttons button:hover {
+    transform: translateY(-2px); 
+    background-color: #555;
+  }
+  
+  .ad-buttons button:active {
+    transform: translateY(2px); 
+    background-color: #333;
+  }
+    
